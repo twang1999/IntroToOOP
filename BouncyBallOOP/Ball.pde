@@ -3,7 +3,6 @@ class Ball {
   PVector loc, vel;
   int diam;
   color c;
-
 /*************************
 this is a constructor. you can have more than one constructor for a given class; 
 constructor doesn't return so don't need datatype (ex: void, float) in beginning
@@ -23,5 +22,15 @@ constructor doesn't return so don't need datatype (ex: void, float) in beginning
   }
   void move(){
     loc.add(vel); //add velocity to location
+    if(loc.x>=width){
+      vel.x=-abs(vel.x);
+    } else if (loc.x<=0){
+      vel.x=abs(vel.x);
+    }
+    if(loc.y>=height){
+      vel.y=-abs(vel.y);
+    } else if (loc.y<=0){
+      vel.y=abs(vel.y);
+    }
   }
 }
