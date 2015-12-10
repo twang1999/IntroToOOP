@@ -4,7 +4,10 @@ class Ball {
   int diam;
   color c;
 
-//this is a constructor. you can have more than one constructor for a given class
+/*************************
+this is a constructor. you can have more than one constructor for a given class; 
+constructor doesn't return so don't need datatype (ex: void, float) in beginning
+***********************/
   Ball() {
     diam = 200;
     loc = new PVector(random(diam, width-diam), random(diam, height-diam));
