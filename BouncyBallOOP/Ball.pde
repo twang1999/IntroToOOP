@@ -11,6 +11,7 @@ constructor doesn't return so don't need datatype (ex: void, float) in beginning
   Ball() {
     diam = 200;
     loc = new PVector(random(diam, width-diam), random(diam, height-diam));
+    vel = PVector.random2D(); //PVector() is a constructor
     c = color(random(255), random(50), random(100, 255));
   }
 
@@ -19,5 +20,8 @@ constructor doesn't return so don't need datatype (ex: void, float) in beginning
     fill(c);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
+  }
+  void move(){
+    loc.add(vel); //add velocity to location
   }
 }
