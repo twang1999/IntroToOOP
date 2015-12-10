@@ -1,4 +1,6 @@
+Ball a;
 Ball b;                //declare a new ball called b
+Ball c;
 
 void setup() {
   size(1600, 1200);
@@ -7,5 +9,7 @@ void setup() {
 
 void draw() {
   background(0);
+  a.display();
   b.display();         //call b's display() method
+  c.display();
 }
